@@ -8,6 +8,8 @@ const LoanScheme = mongoose.Schema({
     status: { type: Boolean },
     date: { type: String, required: true },
     UserID:{type:String},
+    weeklyRepay:Number,
+    paid:Number
 },{
     versionKey:false
 })

@@ -10,7 +10,7 @@ const { LoanRouter } = require('./routes/LoanRoutes')
 const { Auth } = require('./middleware/Auth')
 require('dotenv').config()
 app.use(express.json())
-app.use('/loan',Auth)
+
 app.use("/loan",LoanRouter)
 
 app.get("/", (req, res) => {

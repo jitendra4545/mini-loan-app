@@ -9,7 +9,7 @@ console.log(token)
         jwt.verify(token, 'jitendra', function(err, decoded) {
             if(decoded){
                 console.log(decoded)
-                req.body.UserID=decoded.user_id
+                req.body.UserID=decoded.UserID
                 next()
             }else{
                 res.send({"msg":"Token didn't match, Please Login First!"})
