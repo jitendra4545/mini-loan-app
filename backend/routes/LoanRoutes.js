@@ -50,7 +50,6 @@ LoanRouter.patch("/:id", Auth, async (req, res) => {
 
     try {
         let updateData = await LoanModel.findByIdAndUpdate({ _id: id }, { status: true })
-        // console.log(updateData)
         res.send({ "msg": "You loan successfully approved " })
     } catch (err) {
         res.send({ "msg": "somthing went wrong! unable to update data", "error": err.message })
